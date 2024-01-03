@@ -67,24 +67,16 @@ export const Consultant = ({}: IConsult) => {
       <div className="flex justify-between mb-4">
         <h1
           className="text-content-black font-semibold text-xl leading-7"
-          onClick={() => {
-            console.log({ step });
-            setStep((prev) => prev - 1);
-          }}
         >
           Law consultant
         </h1>
         <IconButton
           className="ml-auto !p-1"
-          onClick={() => {
-            console.log({ step });
-            setStep((prev) => prev + 1);
-          }}
         >
           <XMarkIcon className="w-5 h-5 text-content-black" />
         </IconButton>
       </div>
-      <div className={`flex flex-col lg:flex-row gap-4 flex-grow mb-5`}>
+      <div className={`flex flex-col md:flex-row gap-4 flex-grow mb-5`}>
         <div className="flex flex-col flex-1">
           <div
             className={classNames(`mb-4 custom-scrollbar-thumb flex-1`, {
@@ -179,9 +171,13 @@ export const Consultant = ({}: IConsult) => {
         </div>
         {step >= QUESTION_STEPS.FACTS && (
           <div
-            className={`flex flex-col flex-1 max-w-[260px] w-full bg-content-grey-900 text-content-grey-100 px-4 py-3 rounded-20 custom-scrollbar-thumb ${
-              step === QUESTION_STEPS.CONSULTATION ? "max-h-[282px]" : ""
-            }`}
+            className={classNames(
+              `flex flex-col flex-1 w-full max-w-md mx-auto md:mx-0 md:max-w-[260px] bg-content-grey-900 text-content-grey-100 px-4 py-3 rounded-20 custom-scrollbar-thumb`,
+
+              {
+                "max-h-[282px]": step === QUESTION_STEPS.CONSULTATION,
+              }
+            )}
           >
             <h3 className=" font-semibold mb-3 text-sm">Facts:</h3>
             {step > QUESTION_STEPS.FACTS && (

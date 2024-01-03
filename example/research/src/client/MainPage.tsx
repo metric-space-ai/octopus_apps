@@ -1,12 +1,11 @@
 import "./Main.css";
-
+import Research from "./sections/Research";
 import { Toaster } from "react-hot-toast";
-import Home from "./sections/home";
 
 const MainPage = () => {
   return (
     <>
-      <Home />
+      <Research />
       <Toaster position="top-right" />
     </>
   );

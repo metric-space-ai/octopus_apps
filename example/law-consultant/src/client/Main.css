@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "poppins";
+  font-weight: 400;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.c-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.c-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #7b14cb;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.c-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #7b14cb;
+  cursor: pointer;
+}
+.custom-scrollbar-thumb {
+  overflow: auto;
+}
+.custom-scrollbar-thumb::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+.custom-scrollbar-thumb::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 9999px;
+}
+
+/* Handle */
+.custom-scrollbar-thumb::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #aaaaaa;
+}

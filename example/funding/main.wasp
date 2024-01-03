@@ -1,0 +1,26 @@
+app octopus_plugin {
+  wasp: {
+    version: "^0.11.8"
+  },
+  title: "octopus_plugin",
+    head: [  // optional
+    "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap\" />"
+  ],
+  dependencies: [
+    ("classnames", "^2.3.2"),
+    ("tailwindcss", "^3.2.7"),
+    ("@headlessui/react", "1.7.13"),
+    ("@tailwindcss/forms", "^0.5.3"),
+    ("@tailwindcss/typography", "^0.5.7"),
+    ("@heroicons/react", "^2.0.18"),
+    ("use-debounce", "^9.0.4"),
+    ("react-hot-toast", "^2.4.1"),
+    ("emoji-picker-react", "^4.4.9"),
+    ("react-hook-form", "^7.45.4"),
+  ]
+}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import Main from "@client/MainPage.jsx"
+}

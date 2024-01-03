@@ -1,12 +1,11 @@
 import "./Main.css";
-
+import Funding from "./sections/funding";
 import { Toaster } from "react-hot-toast";
-import Home from "./sections/home";
 
 const MainPage = () => {
   return (
     <>
-      <Home />
+      <Funding />
       <Toaster position="top-right" />
     </>
   );
